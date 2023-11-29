@@ -1,0 +1,31 @@
+<form #form1="ngForm" class="form">
+
+  <br>
+  <div>
+    <span>Havi bevétel: </span>
+    <input type="number" [(ngModel)]="cumulativeIncome" name="name" #nameModel="ngModel" required >
+  </div>
+  <br>
+  <div>
+    <span>Egyéb bevétel: </span>
+    <input type="number" [(ngModel)]="otherIncome" name="name" #nameModel="ngModel" required >
+  </div>
+
+
+    <mat-card class="demo-inline-calendar-card">
+      <mat-calendar [(selected)]="selected"></mat-calendar>
+    </mat-card>
+    <p>Selected date: {{selected | date}}</p>
+ 
+  <br>
+  <button type="submit"  (click)="submit()">Mentés</button>
+</form>
+
+
+
+
+
+
+
+
+
