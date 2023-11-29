@@ -11,6 +11,7 @@ import {MatCardModule} from '@angular/material/card';
 import {MatInputModule} from '@angular/material/input';
 import {MatSelectModule} from '@angular/material/select';
 import { DatePipe } from '@angular/common';
+import { HttpClientModule } from '@angular/common/http';
 
 
 
@@ -31,6 +32,7 @@ import { DatePipe } from '@angular/common';
     MatCardModule,
     MatInputModule,
     MatSelectModule,
+    HttpClientModule
     
 
     

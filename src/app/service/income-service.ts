@@ -1,4 +1,4 @@
-export interface Income {
+export interface IncomeDto {
 
 id? : number,
 dateOfIncome?: Date,
