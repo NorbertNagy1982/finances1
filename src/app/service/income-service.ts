@@ -1,10 +1,8 @@
 export interface IncomeDto {
 
 id? : number,
-dateOfIncome?: Date,
+dateOfIncome: Date,
 cumulativeSalary? : number,
 otherIncome? : number,
 userId? : number
-
-
 }

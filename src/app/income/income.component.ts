@@ -3,8 +3,6 @@ import { IncomeDto } from '../service/income-service';
 import { DatePipe } from '@angular/common';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 
-
-
 @Component({
   selector: 'app-income',
   templateUrl: './income.component.html',
@@ -13,25 +11,21 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 })
 export class IncomeComponent implements OnInit {
 
-
 cumulativeIncome? : number;
 otherIncome? : number;
-selected?: Date;
+selected! : Date;
 
-
-
-
-  constructor(private datePipe : DatePipe, private httpClient : HttpClient) { }
+constructor(private datePipe : DatePipe, private httpClient : HttpClient) { }
 
   ngOnInit() {
   }
 
-
   public submit():void{
+    
     const income = {
-      id: 1, dateOfIncome: this.datePipe.transform(this.selected, 'yyyy-MM-dd'), cumulativeSalary: this.cumulativeIncome, otherIncome: this.otherIncome,
+      id: 1, dateOfIncome: this.selected, cumulativeSalary: this.cumulativeIncome || 0, otherIncome: this.otherIncome || 0,
       userId: 1
-    } as unknown as IncomeDto;
+    } as IncomeDto;
     this.httpClient.post<IncomeDto>('http://localhost:8081/income/save', income)
     .subscribe(
       data => {
