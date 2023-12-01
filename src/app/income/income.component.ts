@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { IncomeDto } from '../service/income-service';
 import { DatePipe } from '@angular/common';
-import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { HttpClient} from '@angular/common/http';
 
 @Component({
   selector: 'app-income',
@@ -13,7 +13,7 @@ export class IncomeComponent implements OnInit {
 
 cumulativeIncome? : number;
 otherIncome? : number;
-selected! : Date;
+selected? : Date;
 
 constructor(private datePipe : DatePipe, private httpClient : HttpClient) { }
 
@@ -21,11 +21,11 @@ constructor(private datePipe : DatePipe, private httpClient : HttpClient) { }
   }
 
   public submit():void{
-    
+
     const income = {
-      id: 1, dateOfIncome: this.selected, cumulativeSalary: this.cumulativeIncome || 0, otherIncome: this.otherIncome || 0,
+      id: 1, dateOfIncome: this.datePipe.transform(this.selected, "yyyy-MM-dd"), cumulativeSalary: this.cumulativeIncome || 0, otherIncome: this.otherIncome || 0,
       userId: 1
-    } as IncomeDto;
+    } as unknown as IncomeDto;
     this.httpClient.post<IncomeDto>('http://localhost:8081/income/save', income)
     .subscribe(
       data => {
@@ -35,6 +35,7 @@ constructor(private datePipe : DatePipe, private httpClient : HttpClient) { }
         console.error('Error in post request', error);
       }
     );
+    console.log("income object: "+income.dateOfIncome)
   }
 
 
