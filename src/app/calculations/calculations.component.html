@@ -1,3 +1,10 @@
-<p>
-  calculations works!
-</p>
+<mat-card class="start">
+  <mat-calendar [(selected)]="startDate"></mat-calendar>
+</mat-card>
+<p>Kezdő dátum: {{startDate | date}}</p>
+
+
+<mat-card class="end">
+  <mat-calendar [(selected)]="endDate"></mat-calendar>
+</mat-card>
+<p class="end-info">Záró dátum: {{endDate| date}}</p>

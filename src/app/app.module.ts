@@ -15,17 +15,19 @@ import { HttpClientModule } from '@angular/common/http';
 import { OutcomeComponent } from './outcome/outcome.component';
 import { HeaderComponent } from './header/header.component';
 import { CalculationsComponent } from './calculations/calculations.component';
+import { WelcomeComponent } from './welcome/welcome.component';
 
 
 
 
 @NgModule({
-  declarations: [				
+  declarations: [					
     AppComponent,
       IncomeComponent,
       OutcomeComponent,
       HeaderComponent,
-      CalculationsComponent
+      CalculationsComponent,
+      WelcomeComponent
    ],
   imports: [
     BrowserModule,

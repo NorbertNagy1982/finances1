@@ -1,0 +1,17 @@
+.end{
+position:absolute;
+left: 350px;
+width: 300px;
+top:30px;
+}
+
+.start{
+   top:30px;
+    width: 300px;
+    }
+
+.end-info{
+    position:absolute;
+    left:400px;
+    top:400px;
+}

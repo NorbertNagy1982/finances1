@@ -7,6 +7,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CalculationsComponent implements OnInit {
 
+startDate? : Date;
+endDate? : Date;
+
+
+
   constructor() { }
 
   ngOnInit() {
