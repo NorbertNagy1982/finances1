@@ -1,0 +1,28 @@
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+
+
+.demo-inline-calendar-card {
+    width: 300px;
+  }
+
+  .column1{
+    position:absolute;
+    left:400px;
+    top:55px;
+  }
+
+  .column2{
+    position:absolute;
+    left:800px;
+    top: 55px;
+  }
+
+  .calendar{
+    position:absolute;
+    left: 900px;
+    top:55px;
+  
+  }
+
+

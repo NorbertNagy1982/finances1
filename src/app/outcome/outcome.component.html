@@ -1,0 +1,77 @@
+<form #form1="ngForm" class="form">
+
+  <br>
+  <div class="column1">
+  <div>
+    <span>Havi teljes rezsiköltség: </span>
+    <input type="number" [(ngModel)]="overhead" name="name" #nameModel="ngModel" required >
+  </div>
+  <br>
+ 
+  <div>
+    <span>Havi élelmiszer kiadás: </span>
+    <input type="number" [(ngModel)]="food" name="name" #nameModel="ngModel" required >
+  </div>
+  <br>
+
+  <div>
+    <span>Havi egészségügyi kiadás: </span>
+    <input type="number" [(ngModel)]="medication" name="name" #nameModel="ngModel" required >
+  </div>
+  <br>
+
+  <div>
+    <span>Havi üzemanyag kiadás: </span>
+    <input type="number" [(ngModel)]="vehicleFuel" name="name" #nameModel="ngModel" required >
+  </div>
+  <br>
+
+  <div>
+    <span>Havi egyéb adó kötelezettség: </span>
+    <input type="number" [(ngModel)]="otherTax" name="name" #nameModel="ngModel" required >
+  </div>
+   <br>
+
+ 
+  <div>
+    <span>Havi gyermekállátás költsége: </span>
+    <input type="number" [(ngModel)]="cumulativeChildCare" name="name" #nameModel="ngModel" required >
+  </div>
+  <br>
+
+  <div>
+    <span>Havi biztosítási díjak: </span>
+    <input type="number" [(ngModel)]="cumulativeInsurances" name="name" #nameModel="ngModel" required >
+  </div>
+  <br>
+
+  <div>
+    <span>Havi szórakozásra fordított kiadás: </span>
+    <input type="number" [(ngModel)]="entertainment" name="name" #nameModel="ngModel" required >
+  </div>
+  <br>
+
+  <div>
+    <span>Havi egyéb költségek: </span>
+    <input type="number" [(ngModel)]="other" name="name" #nameModel="ngModel" required >
+  </div>
+</div>
+<br>
+
+<div class="calendar">
+    <mat-card class="demo-inline-calendar-card">
+      <mat-calendar [(selected)]="selected"></mat-calendar>
+    </mat-card>
+    <p>Selected date: {{selected | date}}</p>
+ 
+  <br>
+  <button type="submit"  (click)="submit()">Mentés</button>
+  </div>
+</form>
+
+
+
+
+
+
+

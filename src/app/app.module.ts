@@ -12,15 +12,20 @@ import {MatInputModule} from '@angular/material/input';
 import {MatSelectModule} from '@angular/material/select';
 import { DatePipe } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
+import { OutcomeComponent } from './outcome/outcome.component';
+import { HeaderComponent } from './header/header.component';
+import { CalculationsComponent } from './calculations/calculations.component';
 
 
 
 
 @NgModule({
-  declarations: [	
+  declarations: [				
     AppComponent,
       IncomeComponent,
-   
+      OutcomeComponent,
+      HeaderComponent,
+      CalculationsComponent
    ],
   imports: [
     BrowserModule,

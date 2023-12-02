@@ -23,7 +23,7 @@ constructor(private datePipe : DatePipe, private httpClient : HttpClient) { }
   public submit():void{
 
     const income = {
-      id: 1, dateOfIncome: this.datePipe.transform(this.selected, "yyyy-MM-dd"), cumulativeSalary: this.cumulativeIncome || 0, otherIncome: this.otherIncome || 0,
+      dtoId: 1, date: this.datePipe.transform(this.selected, "yyyy-MM-dd"), cumulativeSalary: this.cumulativeIncome || 0, otherIncome: this.otherIncome || 0,
       userId: 1
     } as unknown as IncomeDto;
     this.httpClient.post<IncomeDto>('http://localhost:8081/income/save', income)
@@ -35,7 +35,7 @@ constructor(private datePipe : DatePipe, private httpClient : HttpClient) { }
         console.error('Error in post request', error);
       }
     );
-    console.log("income object: "+income.dateOfIncome)
+   
   }
 
 
