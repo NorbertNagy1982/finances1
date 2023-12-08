@@ -4,7 +4,6 @@ import { MatDatepickerModule } from '@angular/material/datepicker';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { MatFormFieldModule } from '@angular/material/form-field';
-import { MatNativeDateModule } from '@angular/material';
 import { IncomeComponent } from './income/income.component';
 import { FormsModule } from '@angular/forms';
 import {MatCardModule} from '@angular/material/card';
@@ -16,9 +15,6 @@ import { OutcomeComponent } from './outcome/outcome.component';
 import { HeaderComponent } from './header/header.component';
 import { CalculationsComponent } from './calculations/calculations.component';
 import { WelcomeComponent } from './welcome/welcome.component';
-
-
-
 
 @NgModule({
   declarations: [					
@@ -34,7 +30,6 @@ import { WelcomeComponent } from './welcome/welcome.component';
     AppRoutingModule,
     MatFormFieldModule,
     MatDatepickerModule,
-    MatNativeDateModule,
     FormsModule,
     MatCardModule,
     MatInputModule,
