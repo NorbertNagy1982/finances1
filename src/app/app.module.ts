@@ -15,6 +15,9 @@ import { OutcomeComponent } from './outcome/outcome.component';
 import { HeaderComponent } from './header/header.component';
 import { CalculationsComponent } from './calculations/calculations.component';
 import { WelcomeComponent } from './welcome/welcome.component';
+import { MatNativeDateModule } from '@angular/material/core';
+import { NgChartsModule } from 'ng2-charts';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [					
@@ -34,7 +37,10 @@ import { WelcomeComponent } from './welcome/welcome.component';
     MatCardModule,
     MatInputModule,
     MatSelectModule,
-    HttpClientModule
+    HttpClientModule,
+    MatNativeDateModule,
+    NgChartsModule,
+    BrowserAnimationsModule
     
 
     

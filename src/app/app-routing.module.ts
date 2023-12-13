@@ -7,28 +7,16 @@ import { WelcomeComponent } from './welcome/welcome.component';
 
 const routes: Routes = [
 
-/*
-  {
-    path: "",
-    component: WelcomeComponent,
-    children: 
-    [
-{
-  path: "income",
-  component: IncomeComponent
-}, 
+    {
+      path:"calculations",
+      component: CalculationsComponent
+    }, 
 
-{
-  path: "outcome",
-  component: OutcomeComponent
-}]},
+    {
+      path:"",
+      component: WelcomeComponent
+    }
 
-{
-  path: "calculations",
-  component: CalculationsComponent
-}
-    
-  */
 
 
 

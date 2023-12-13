@@ -8,3 +8,15 @@
   <mat-calendar [(selected)]="endDate"></mat-calendar>
 </mat-card>
 <p class="end-info">Záró dátum: {{endDate| date}}</p>
+
+
+<button type="submit" (click)="getMonthlyBalance()" class="button"></button>
+
+<div style="display: block;">
+  <canvas baseChart width="400" height="400"
+  [type]="'line'"
+  [data]="lineChartData"
+  [options]="lineChartOptions"
+  [legend]="lineChartLegend">
+</canvas>
+</div>

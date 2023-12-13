@@ -15,3 +15,8 @@ top:30px;
     left:400px;
     top:400px;
 }
+
+.button{
+    position:absolute;
+    top: 600px;
+}
