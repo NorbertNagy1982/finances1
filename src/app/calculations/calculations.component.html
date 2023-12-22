@@ -1,24 +1,104 @@
-<div class="container">
-<mat-card class="start">
-  <mat-calendar [(selected)]="startDate"></mat-calendar>
-</mat-card>
-<p>Kezdő dátum: {{startDate | date}}</p>
-</div>
 
 
-<mat-card class="end">
-  <mat-calendar [(selected)]="endDate"></mat-calendar>
-</mat-card>
-<p class="end-info">Záró dátum: {{endDate| date}}</p>
+<form #form1="ngForm" class="form">
+  <div>
+    <span>Kezdő dátum: </span>
+    <input type="date" [(ngModel)]="startDate" name="name" #nameModel="ngModel" required >
+  </div>
+  <br>
+
+  <div>
+    <span>Záró dátum: </span>
+    <input type="date" [(ngModel)]="endDate" name="name" #priceModel="ngModel" required >
+  </div>
+  <br>
+  
+</form>
 
 
-<button type="submit" (click)="getMonthlyBalance()" class="button"></button>
-
+<div class="graph">
 <div style="display: block;">
   <canvas baseChart width="400" height="400"
   [type]="'line'"
   [data]="lineChartData"
   [options]="lineChartOptions"
-  [legend]="lineChartLegend">
+  [legend]="false">
 </canvas>
 </div>
+</div>
+
+
+<form #form1="ngForm" class="checkbox">
+  <div>
+    <span>Havi bevétel-kiadás különbözet: </span>
+    <input type="checkbox" [(ngModel)]="monthlyBalanceBool" name="name" #nameModel="ngModel" value="true">
+  </div>
+  <br>
+  <div>
+    <span>Havi teljes bevétel: </span>
+    <input type="checkbox" [(ngModel)]="monthlyIncomeBool" name="name" #nameModel="ngModel" value="true">
+  </div>
+  <br>
+  <div>
+    <span>Havi teljes kiadás: </span>
+    <input type="checkbox" [(ngModel)]="monthlyTotalOutcomeBool" name="name" #nameModel="ngModel" value="true">
+  </div>
+  <br>
+  <button tpye="submit" (click)="setGraphData()" class="submit-button">Beállít</button>
+</form>
+
+
+
+<form #form1="ngForm" class="checkbox2">
+  <div>
+    <span>Havi rezsi: </span>
+    <input type="checkbox" [(ngModel)]="monthlyOverheadBool" name="name" #nameModel="ngModel" value="true">
+  </div>
+  <br>
+  <div>
+    <span>Havi élelmiszer kiadás: </span>
+    <input type="checkbox" [(ngModel)]="monthlyFoodBool" name="name" #nameModel="ngModel" value="true">
+  </div>
+  <br>
+  <div>
+    <span>Havi gyógyszer kiadás: </span>
+    <input type="checkbox" [(ngModel)]="monthlyMedicationBool" name="name" #nameModel="ngModel" value="true">
+  </div>
+  <br>
+  <div>
+    <span>Havi üzemanyag kiadás: </span>
+    <input type="checkbox" [(ngModel)]="monthlyFuelBool" name="name" #nameModel="ngModel" value="true">
+  </div>
+  <br>
+  <div>
+    <span>Havi egyéb adókötelezettség: </span>
+    <input type="checkbox" [(ngModel)]="monthlyOtherTaxBool" name="name" #nameModel="ngModel" value="true">
+  </div>
+  <br>
+  <div>
+    <span>Havi gyerekekre fordított kiadás: </span>
+    <input type="checkbox" [(ngModel)]="monthlyChildBool" name="name" #nameModel="ngModel" value="true">
+  </div>
+  <br>
+  <div>
+    <span>Havi biztosítás: </span>
+    <input type="checkbox" [(ngModel)]="monthlyInsuranceBool" name="name" #nameModel="ngModel" value="true">
+  </div>
+  <br>
+  <div>
+    <span>Havi szórakozás kiadása: </span>
+    <input type="checkbox" [(ngModel)]="monthlyEntertainmentBool" name="name" #nameModel="ngModel" value="true">
+  </div>
+  <br>
+  <div>
+    <span>Havi egyéb kiadás: </span>
+    <input type="checkbox" [(ngModel)]="monthlyOtherBool" name="name" #nameModel="ngModel" value="true">
+  </div>
+  <br>
+</form>
+
+
+
+<ul class="labelp" [style.top.px]="topOffset" >
+  <li *ngFor="let item of displayedChartNameList; let i=index" [style.color]="item.color">{{ item.name }}</li>
+</ul>

@@ -18,17 +18,39 @@ top:30px;
     top:560px;
 }
 
-.button{
-    position:absolute;
-    top: 550px;
-    left: 500px;
-    width: 100px;
-    height: 40px;
+
+.form{
+   position: absolute;
+   top: 100px;
 }
 
-.container{
-    display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  margin: 20px;
+.graph{
+    position: absolute;
+    left: 600px;
+    top:100px;
+}
+
+.checkbox{
+    position: absolute;
+    top: 200px;
+}
+
+.checkbox2{
+    position:absolute;
+    top:200px;
+    left:300px;
+}
+
+.labelp{
+    position:absolute;
+    left:1000px;
+    
+}
+
+.submit-button{
+    position:absolute;
+    top:130px;
+    left:20px;
+    width: 150px;
+    height:50px;
 }
