@@ -19,3 +19,12 @@
     font-weight: bold;
     color:white;
 }
+
+.sum{
+    position:absolute;
+    top:15px;
+    left:300px;
+    font-size:15px;
+    font-weight: bold;
+    color:white;
+}

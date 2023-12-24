@@ -20,6 +20,7 @@ import { NgChartsModule } from 'ng2-charts';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SumComponent } from './sum/sum.component';
 
+
 @NgModule({
   declarations: [						
     AppComponent,

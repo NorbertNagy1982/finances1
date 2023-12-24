@@ -1,3 +1,11 @@
+<form #form1="ngForm" class="dateform">
+  <div>
+    <span>Bejegyzés dátuma </span>
+    <input type="date" [(ngModel)]="selected" name="name" #nameModel="ngModel" required >
+  </div>
+  <br>
+
+
 <form #form1="ngForm" class="form">
 
   <br>
@@ -31,8 +39,10 @@
     <input type="number" [(ngModel)]="otherTax" name="name" #nameModel="ngModel" required >
   </div>
    <br>
-
+</div>
  
+
+<div class="column2">
   <div>
     <span>Havi gyermekállátás költsége: </span>
     <input type="number" [(ngModel)]="cumulativeChildCare" name="name" #nameModel="ngModel" required >
@@ -58,15 +68,9 @@
 </div>
 <br>
 
-<div class="calendar">
-    <mat-card class="demo-inline-calendar-card">
-      <mat-calendar [(selected)]="selected"></mat-calendar>
-    </mat-card>
-    <p>Dátum: {{selected | date}}</p>
+
+  <button type="submit"  (click)="submit()" class="submitbutton">Mentés</button>
  
-  <br>
-  <button type="submit"  (click)="submit()">Mentés</button>
-  </div>
 </form>
 
 

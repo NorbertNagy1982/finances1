@@ -30,6 +30,7 @@ constructor(private datePipe : DatePipe, private httpClient : HttpClient) { }
     .subscribe(
       data => {
         console.log('Post request successful', data);
+        alert("Sikeres adatbevitel!")
       },
       error => {
         console.error('Error in post request', error);

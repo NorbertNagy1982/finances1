@@ -4,6 +4,7 @@ import { IncomeComponent } from './income/income.component';
 import { OutcomeComponent } from './outcome/outcome.component';
 import { CalculationsComponent } from './calculations/calculations.component';
 import { WelcomeComponent } from './welcome/welcome.component';
+import { SumComponent } from './sum/sum.component';
 
 const routes: Routes = [
 
@@ -15,6 +16,11 @@ const routes: Routes = [
     {
       path:"",
       component: WelcomeComponent
+    },
+
+    {
+      path:"sum",
+      component:SumComponent
     }
 
 

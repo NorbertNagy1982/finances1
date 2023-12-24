@@ -1,3 +1,96 @@
-<p>
-  sum works!
-</p>
+<form #form1="ngForm" class="form">
+  <div>
+    <span>Kezdő dátum: </span>
+    <input type="date" [(ngModel)]="startDate" name="name" #nameModel="ngModel" required >
+  </div>
+  <br>
+
+  <div>
+    <span>Záró dátum: </span>
+    <input type="date" [(ngModel)]="endDate" name="name" #priceModel="ngModel" required >
+  </div>
+  <br>
+  
+</form>
+
+
+<form #form1="ngForm" class="checkbox">
+  <div>
+    <span>Bevétel-kiadás különbözet: </span>
+    <input type="checkbox" [(ngModel)]="sumBalanceBool" name="name" #nameModel="ngModel" value="true">
+  </div>
+  <br>
+  <div>
+    <span>Teljes bevétel: </span>
+    <input type="checkbox" [(ngModel)]="sumIncomeBool" name="name" #nameModel="ngModel" value="true">
+  </div>
+  <br>
+  <div>
+    <span>Teljes kiadás: </span>
+    <input type="checkbox" [(ngModel)]="sumTotalOutcomeBool" name="name" #nameModel="ngModel" value="true">
+  </div>
+  <br>
+  <button tpye="submit" (click)="setGraphData()" class="submit-button">Beállít</button>
+</form>
+
+
+
+<form #form1="ngForm" class="checkbox2">
+  <div>
+    <span>Rezsi: </span>
+    <input type="checkbox" [(ngModel)]="sumOverheadBool" name="name" #nameModel="ngModel" value="true">
+  </div>
+  <br>
+  <div>
+    <span>Élelmiszer kiadás: </span>
+    <input type="checkbox" [(ngModel)]="sumFoodBool" name="name" #nameModel="ngModel" value="true">
+  </div>
+  <br>
+  <div>
+    <span>Gyógyszer kiadás: </span>
+    <input type="checkbox" [(ngModel)]="sumMedicationBool" name="name" #nameModel="ngModel" value="true">
+  </div>
+  <br>
+  <div>
+    <span>Üzemanyag kiadás: </span>
+    <input type="checkbox" [(ngModel)]="sumFuelBool" name="name" #nameModel="ngModel" value="true">
+  </div>
+  <br>
+  <div>
+    <span>Egyéb adókötelezettség: </span>
+    <input type="checkbox" [(ngModel)]="sumOtherTaxBool" name="name" #nameModel="ngModel" value="true">
+  </div>
+  <br>
+  <div>
+    <span>Gyerekekre fordított kiadás: </span>
+    <input type="checkbox" [(ngModel)]="sumChildBool" name="name" #nameModel="ngModel" value="true">
+  </div>
+  <br>
+  <div>
+    <span>Biztosítás: </span>
+    <input type="checkbox" [(ngModel)]="sumInsuranceBool" name="name" #nameModel="ngModel" value="true">
+  </div>
+  <br>
+  <div>
+    <span>Szórakozásra fordított kiadása: </span>
+    <input type="checkbox" [(ngModel)]="sumEntertainmentBool" name="name" #nameModel="ngModel" value="true">
+  </div>
+  <br>
+  <div>
+    <span>Egyéb kiadás: </span>
+    <input type="checkbox" [(ngModel)]="sumOtherBool" name="name" #nameModel="ngModel" value="true">
+  </div>
+  <br>
+</form>
+
+<div style="display: block;" class="barchart">
+  <canvas baseChart
+          [datasets]="barChartData"
+          [labels]="barChartLabels"
+          [options]="barChartOptions"
+          [legend]="barChartLegend"
+          [type]="barChartType"
+         
+          >
+  </canvas>
+</div>

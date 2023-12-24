@@ -88,8 +88,8 @@ this.monthlyInsuranceLabel,this.monthlyEntertainmentLabel,this.monthlyOtherLabel
 
   public getMonthlyBalance(): void {
     this.chatLabel = "Havi bevétel-kiadás különbözet"
-    let start = this.datePipe.transform(this.startDate, "yyyy-MM-dd");
-    let end = this.datePipe.transform(this.endDate, "yyyy-MM-dd");
+    let start = this.startDate ? this.datePipe.transform(this.startDate, "yyyy-MM-dd"):'';
+    let end = this.endDate ? this.datePipe.transform(this.endDate, "yyyy-MM-dd"):'';
     this.httpClient.get<any[]>(`http://localhost:8081/calculation/monthlybalance?start=${start}&end=${end}`)
       .subscribe(
         (data: any[]) => {
@@ -111,8 +111,8 @@ this.monthlyInsuranceLabel,this.monthlyEntertainmentLabel,this.monthlyOtherLabel
 
   public getMonthlyIncome(): void {
     this.chatLabel = "Havi bevételek"
-    let start = this.datePipe.transform(this.startDate, "yyyy-MM-dd");
-    let end = this.datePipe.transform(this.endDate, "yyyy-MM-dd");
+    let start = this.startDate ? this.datePipe.transform(this.startDate, "yyyy-MM-dd"):'';
+    let end = this.endDate ? this.datePipe.transform(this.endDate, "yyyy-MM-dd"):'';
     this.httpClient.get<any[]>(`http://localhost:8081/income/monthlysum?start=${start}&end=${end}`)
       .subscribe(
         (data: any[]) => {
@@ -134,8 +134,8 @@ this.monthlyInsuranceLabel,this.monthlyEntertainmentLabel,this.monthlyOtherLabel
 
   public getMonthlyTotalOutcome(): void {
     this.chatLabel = "Havi teljes kiadás"
-    let start = this.datePipe.transform(this.startDate, "yyyy-MM-dd");
-    let end = this.datePipe.transform(this.endDate, "yyyy-MM-dd");
+    let start = this.startDate ? this.datePipe.transform(this.startDate, "yyyy-MM-dd"):'';
+    let end = this.endDate ? this.datePipe.transform(this.endDate, "yyyy-MM-dd"):'';
     this.httpClient.get<any[]>(`http://localhost:8081/outcome/monthlysum?start=${start}&end=${end}`)
       .subscribe(
         (data: any[]) => {
@@ -157,8 +157,8 @@ this.monthlyInsuranceLabel,this.monthlyEntertainmentLabel,this.monthlyOtherLabel
 
   public getMonthlyOverhead(): void {
     this.chatLabel = "Havi rezsi"
-    let start = this.datePipe.transform(this.startDate, "yyyy-MM-dd");
-    let end = this.datePipe.transform(this.endDate, "yyyy-MM-dd");
+    let start = this.startDate ? this.datePipe.transform(this.startDate, "yyyy-MM-dd"):'';
+    let end = this.endDate ? this.datePipe.transform(this.endDate, "yyyy-MM-dd"):'';
     this.httpClient.get<any[]>(`http://localhost:8081/outcome/overhead?start=${start}&end=${end}`)
       .subscribe(
         (data: any[]) => {
@@ -180,8 +180,9 @@ this.monthlyInsuranceLabel,this.monthlyEntertainmentLabel,this.monthlyOtherLabel
 
   public getMonthlyFood(): void {
     this.chatLabel = "Havi rezsi"
-    let start = this.datePipe.transform(this.startDate, "yyyy-MM-dd");
-    let end = this.datePipe.transform(this.endDate, "yyyy-MM-dd");
+    let start = this.startDate ? this.datePipe.transform(this.startDate, "yyyy-MM-dd"):'';
+    let end = this.endDate ? this.datePipe.transform(this.endDate, "yyyy-MM-dd"):'';
+    console.log(start)
     this.httpClient.get<any[]>(`http://localhost:8081/outcome/food?start=${start}&end=${end}`)
       .subscribe(
         (data: any[]) => {
@@ -203,8 +204,8 @@ this.monthlyInsuranceLabel,this.monthlyEntertainmentLabel,this.monthlyOtherLabel
 
   public getMonthlyMedication(): void {
     this.chatLabel = "Havi rezsi"
-    let start = this.datePipe.transform(this.startDate, "yyyy-MM-dd");
-    let end = this.datePipe.transform(this.endDate, "yyyy-MM-dd");
+    let start = this.startDate ? this.datePipe.transform(this.startDate, "yyyy-MM-dd"):'';
+    let end = this.endDate ? this.datePipe.transform(this.endDate, "yyyy-MM-dd"):'';
     this.httpClient.get<any[]>(`http://localhost:8081/outcome/medication?start=${start}&end=${end}`)
       .subscribe(
         (data: any[]) => {
@@ -226,8 +227,8 @@ this.monthlyInsuranceLabel,this.monthlyEntertainmentLabel,this.monthlyOtherLabel
 
   public getMonthlyFuel(): void {
     this.chatLabel = "Havi üzemanyag"
-    let start = this.datePipe.transform(this.startDate, "yyyy-MM-dd");
-    let end = this.datePipe.transform(this.endDate, "yyyy-MM-dd");
+    let start = this.startDate ? this.datePipe.transform(this.startDate, "yyyy-MM-dd"):'';
+    let end = this.endDate ? this.datePipe.transform(this.endDate, "yyyy-MM-dd"):'';
     this.httpClient.get<any[]>(`http://localhost:8081/outcome/fuel?start=${start}&end=${end}`)
       .subscribe(
         (data: any[]) => {
@@ -249,8 +250,8 @@ this.monthlyInsuranceLabel,this.monthlyEntertainmentLabel,this.monthlyOtherLabel
 
   public getMonthlyOtherTax(): void {
     this.chatLabel = "Havi egyéb adó"
-    let start = this.datePipe.transform(this.startDate, "yyyy-MM-dd");
-    let end = this.datePipe.transform(this.endDate, "yyyy-MM-dd");
+    let start = this.startDate ? this.datePipe.transform(this.startDate, "yyyy-MM-dd"):'';
+    let end = this.endDate ? this.datePipe.transform(this.endDate, "yyyy-MM-dd"):'';
     this.httpClient.get<any[]>(`http://localhost:8081/outcome/othertax?start=${start}&end=${end}`)
       .subscribe(
         (data: any[]) => {
@@ -272,8 +273,8 @@ this.monthlyInsuranceLabel,this.monthlyEntertainmentLabel,this.monthlyOtherLabel
 
   public getMonthlyChildCare(): void {
     this.chatLabel = "Havi gyerekre fordított kiadás"
-    let start = this.datePipe.transform(this.startDate, "yyyy-MM-dd");
-    let end = this.datePipe.transform(this.endDate, "yyyy-MM-dd");
+    let start = this.startDate ? this.datePipe.transform(this.startDate, "yyyy-MM-dd"):'';
+    let end = this.endDate ? this.datePipe.transform(this.endDate, "yyyy-MM-dd"):'';
     this.httpClient.get<any[]>(`http://localhost:8081/outcome/childcare?start=${start}&end=${end}`)
       .subscribe(
         (data: any[]) => {
@@ -295,8 +296,8 @@ this.monthlyInsuranceLabel,this.monthlyEntertainmentLabel,this.monthlyOtherLabel
 
   public getMonthlyInsurance(): void {
     this.chatLabel = "Havi biztosításra fordított kiadás"
-    let start = this.datePipe.transform(this.startDate, "yyyy-MM-dd");
-    let end = this.datePipe.transform(this.endDate, "yyyy-MM-dd");
+    let start = this.startDate ? this.datePipe.transform(this.startDate, "yyyy-MM-dd"):'';
+    let end = this.endDate ? this.datePipe.transform(this.endDate, "yyyy-MM-dd"):'';
     this.httpClient.get<any[]>(`http://localhost:8081/outcome/insurance?start=${start}&end=${end}`)
       .subscribe(
         (data: any[]) => {
@@ -319,8 +320,8 @@ this.monthlyInsuranceLabel,this.monthlyEntertainmentLabel,this.monthlyOtherLabel
   
   public getMonthlyEntertainment(): void {
     this.chatLabel = "Havi szórakozásra fordított kiadás"
-    let start = this.datePipe.transform(this.startDate, "yyyy-MM-dd");
-    let end = this.datePipe.transform(this.endDate, "yyyy-MM-dd");
+    let start = this.startDate ? this.datePipe.transform(this.startDate, "yyyy-MM-dd"):'';
+    let end = this.endDate ? this.datePipe.transform(this.endDate, "yyyy-MM-dd"):'';
     this.httpClient.get<any[]>(`http://localhost:8081/outcome/entertainment?start=${start}&end=${end}`)
       .subscribe(
         (data: any[]) => {
@@ -342,8 +343,8 @@ this.monthlyInsuranceLabel,this.monthlyEntertainmentLabel,this.monthlyOtherLabel
 
   public getMonthlyOther(): void {
     this.chatLabel = "Havi egyéb kiadás"
-    let start = this.datePipe.transform(this.startDate, "yyyy-MM-dd");
-    let end = this.datePipe.transform(this.endDate, "yyyy-MM-dd");
+    let start = this.startDate ? this.datePipe.transform(this.startDate, "yyyy-MM-dd"):'';
+    let end = this.endDate ? this.datePipe.transform(this.endDate, "yyyy-MM-dd"):'';
     this.httpClient.get<any[]>(`http://localhost:8081/outcome/other?start=${start}&end=${end}`)
       .subscribe(
         (data: any[]) => {

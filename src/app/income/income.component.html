@@ -1,3 +1,15 @@
+<form #form1="ngForm" class="dateform">
+  <div>
+    <span>Bejegyzés dátuma </span>
+    <input type="date" [(ngModel)]="selected" name="name" #nameModel="ngModel" required >
+  </div>
+  <br>
+
+
+  
+</form>
+
+
 <form #form1="ngForm" class="form">
 
   <br>
@@ -12,13 +24,10 @@
   </div>
 
 
-    <mat-card class="demo-inline-calendar-card">
-      <mat-calendar [(selected)]="selected"></mat-calendar>
-    </mat-card>
-    <p>Dátum: {{selected | date}}</p>
+
  
 
-  <button type="submit"  (click)="submit()">Mentés</button>
+  <button type="submit"  (click)="submit()" class="submitbutton">Mentés</button>
 </form>
 
 
