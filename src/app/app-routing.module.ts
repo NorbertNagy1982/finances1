@@ -5,6 +5,8 @@ import { OutcomeComponent } from './outcome/outcome.component';
 import { CalculationsComponent } from './calculations/calculations.component';
 import { WelcomeComponent } from './welcome/welcome.component';
 import { SumComponent } from './sum/sum.component';
+import { IncomeTableComponent } from './income-table/income-table.component';
+import { OutcomeTableComponent } from './outcome-table/outcome-table.component';
 
 const routes: Routes = [
 
@@ -21,6 +23,14 @@ const routes: Routes = [
     {
       path:"sum",
       component:SumComponent
+    },
+    {
+      path:"income",
+      component:IncomeTableComponent
+    },
+    {
+      path:"outcome",
+      component:OutcomeTableComponent
     }
 
 

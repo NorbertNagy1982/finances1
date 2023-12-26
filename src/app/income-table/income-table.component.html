@@ -1,0 +1,19 @@
+<h2>Table Example</h2>
+<table class="table" >
+  <thead>
+    <tr>
+   
+      <th>Dátum</th>
+      <th>Havi fizetés</th>
+      <th>Egyéb bevétel</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let item of incomeList">
+  
+      <td>{{ item.date | date:'yyyy-MM-dd' }}</td>
+      <td>{{ item.cumulativeSalary }} Ft</td>
+      <td>{{ item.otherIncome  }} Ft</td>
+    </tr>
+  </tbody>
+</table>

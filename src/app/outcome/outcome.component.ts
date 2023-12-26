@@ -28,7 +28,9 @@ export class OutcomeComponent implements OnInit {
   selected? : Date
 
   public submit():void{
-
+if(this.selected==undefined){
+  alert("Dátum megadása kötelező")
+} else{
     const outcome = {
       dtoId: 1, date: this.datePipe.transform(this.selected, "yyyy-MM-dd"), overhead : this.overhead || 0, food: this.food || 0,
       medication : this.medication || 0, vehicleFuel : this.vehicleFuel || 0, otherTax : this.otherTax || 0, 
@@ -47,4 +49,5 @@ export class OutcomeComponent implements OnInit {
     );
    
   }
+}
 }

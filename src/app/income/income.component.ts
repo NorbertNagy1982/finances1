@@ -21,6 +21,9 @@ constructor(private datePipe : DatePipe, private httpClient : HttpClient) { }
   }
 
   public submit():void{
+    if(this.selected==undefined){
+      alert("Dátum megadása kötelező")
+    } else{
 
     const income = {
       dtoId: 1, date: this.datePipe.transform(this.selected, "yyyy-MM-dd"), cumulativeSalary: this.cumulativeIncome || 0, otherIncome: this.otherIncome || 0,
@@ -36,7 +39,7 @@ constructor(private datePipe : DatePipe, private httpClient : HttpClient) { }
         console.error('Error in post request', error);
       }
     );
-   
+    }
   }
 
 

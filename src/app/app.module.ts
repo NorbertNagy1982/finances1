@@ -19,17 +19,21 @@ import { MatNativeDateModule } from '@angular/material/core';
 import { NgChartsModule } from 'ng2-charts';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SumComponent } from './sum/sum.component';
+import { IncomeTableComponent } from './income-table/income-table.component';
+import { OutcomeTableComponent } from './outcome-table/outcome-table.component';
 
 
 @NgModule({
-  declarations: [						
+  declarations: [								
     AppComponent,
       IncomeComponent,
       OutcomeComponent,
       HeaderComponent,
       CalculationsComponent,
       WelcomeComponent,
-      SumComponent
+      SumComponent,
+      IncomeTableComponent,
+      OutcomeTableComponent
    ],
   imports: [
     BrowserModule,

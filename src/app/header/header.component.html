@@ -4,8 +4,11 @@
 
 <div class="menu">
 
-  <p [routerLink]="['/calculations']" routerLinkActive="router-link-active" class="sidebar-elements" class="calc">Havi Kimutatások</p>
-  <p [routerLink]="['/sum']" routerLinkActive="router-link-active" class="sum" >Összegzések</p>
+  <p [routerLink]="['/']" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" class="data-input" >Adatbevitel</p>
+  <p [routerLink]="['/calculations']" routerLinkActive="active" class="calc">Havi Kimutatások</p>
+  <p [routerLink]="['/sum']" routerLinkActive="active" class="sum" >Összegzések</p>
+  <p [routerLink]="['/income']" routerLinkActive="active" class="income" >Bevételek</p>
+  <p [routerLink]="['/outcome']" routerLinkActive="active" class="outcome" >Kiadások</p>
  
 
 

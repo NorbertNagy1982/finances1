@@ -48,8 +48,8 @@ public barChartData?: ChartDataset[];
   }
 
   public getSumBalance(): void {
-    let start = this.datePipe.transform(this.startDate, "yyyy-MM-dd");
-    let end = this.datePipe.transform(this.endDate, "yyyy-MM-dd");
+    let start = this.startDate ? this.datePipe.transform(this.startDate, "yyyy-MM-dd"):'';
+    let end = this.endDate ? this.datePipe.transform(this.endDate, "yyyy-MM-dd"):'';
     this.httpClient.get<number>(`http://localhost:8081/calculation/sumbalance?start=${start}&end=${end}`)
       .subscribe(
          data =>{
@@ -60,8 +60,8 @@ public barChartData?: ChartDataset[];
   }
 
   public getSumIncome(): void {
-    let start = this.datePipe.transform(this.startDate, "yyyy-MM-dd");
-    let end = this.datePipe.transform(this.endDate, "yyyy-MM-dd");
+    let start = this.startDate ? this.datePipe.transform(this.startDate, "yyyy-MM-dd"):'';
+    let end = this.endDate ? this.datePipe.transform(this.endDate, "yyyy-MM-dd"):'';
     this.httpClient.get<number>(`http://localhost:8081/income/sumincome?start=${start}&end=${end}`)
       .subscribe(
          data =>{
@@ -72,8 +72,8 @@ public barChartData?: ChartDataset[];
   }
 
   public getSumOutcome(): void {
-    let start = this.datePipe.transform(this.startDate, "yyyy-MM-dd");
-    let end = this.datePipe.transform(this.endDate, "yyyy-MM-dd");
+    let start = this.startDate ? this.datePipe.transform(this.startDate, "yyyy-MM-dd"):'';
+    let end = this.endDate ? this.datePipe.transform(this.endDate, "yyyy-MM-dd"):'';
     this.httpClient.get<number>(`http://localhost:8081/outcome/sumoutcome?start=${start}&end=${end}`)
       .subscribe(
          data =>{
@@ -84,8 +84,8 @@ public barChartData?: ChartDataset[];
   }
   
   public getSumOverhead(): void {
-    let start = this.datePipe.transform(this.startDate, "yyyy-MM-dd");
-    let end = this.datePipe.transform(this.endDate, "yyyy-MM-dd");
+    let start = this.startDate ? this.datePipe.transform(this.startDate, "yyyy-MM-dd"):'';
+    let end = this.endDate ? this.datePipe.transform(this.endDate, "yyyy-MM-dd"):'';
     this.httpClient.get<number>(`http://localhost:8081/outcome/sumoverhead?start=${start}&end=${end}`)
       .subscribe(
          data =>{
@@ -96,8 +96,8 @@ public barChartData?: ChartDataset[];
   }
 
   public getSumFood(): void {
-    let start = this.datePipe.transform(this.startDate, "yyyy-MM-dd");
-    let end = this.datePipe.transform(this.endDate, "yyyy-MM-dd");
+    let start = this.startDate ? this.datePipe.transform(this.startDate, "yyyy-MM-dd"):'';
+    let end = this.endDate ? this.datePipe.transform(this.endDate, "yyyy-MM-dd"):'';
     this.httpClient.get<number>(`http://localhost:8081/outcome/sumfood?start=${start}&end=${end}`)
       .subscribe(
          data =>{
@@ -108,8 +108,8 @@ public barChartData?: ChartDataset[];
   }
 
   public getSumMedication(): void {
-    let start = this.datePipe.transform(this.startDate, "yyyy-MM-dd");
-    let end = this.datePipe.transform(this.endDate, "yyyy-MM-dd");
+    let start = this.startDate ? this.datePipe.transform(this.startDate, "yyyy-MM-dd"):'';
+    let end = this.endDate ? this.datePipe.transform(this.endDate, "yyyy-MM-dd"):'';
     this.httpClient.get<number>(`http://localhost:8081/outcome/summedication?start=${start}&end=${end}`)
       .subscribe(
          data =>{
@@ -120,8 +120,8 @@ public barChartData?: ChartDataset[];
   }
 
   public getSumFuel(): void {
-    let start = this.datePipe.transform(this.startDate, "yyyy-MM-dd");
-    let end = this.datePipe.transform(this.endDate, "yyyy-MM-dd");
+    let start = this.startDate ? this.datePipe.transform(this.startDate, "yyyy-MM-dd"):'';
+    let end = this.endDate ? this.datePipe.transform(this.endDate, "yyyy-MM-dd"):'';
     this.httpClient.get<number>(`http://localhost:8081/outcome/sumfuel?start=${start}&end=${end}`)
       .subscribe(
          data =>{
@@ -132,8 +132,8 @@ public barChartData?: ChartDataset[];
   }
 
   public getSumOtherTax(): void {
-    let start = this.datePipe.transform(this.startDate, "yyyy-MM-dd");
-    let end = this.datePipe.transform(this.endDate, "yyyy-MM-dd");
+    let start = this.startDate ? this.datePipe.transform(this.startDate, "yyyy-MM-dd"):'';
+    let end = this.endDate ? this.datePipe.transform(this.endDate, "yyyy-MM-dd"):'';
     this.httpClient.get<number>(`http://localhost:8081/outcome/sumothertax?start=${start}&end=${end}`)
       .subscribe(
          data =>{
@@ -144,8 +144,8 @@ public barChartData?: ChartDataset[];
   }
 
   public getSumChildCare(): void {
-    let start = this.datePipe.transform(this.startDate, "yyyy-MM-dd");
-    let end = this.datePipe.transform(this.endDate, "yyyy-MM-dd");
+    let start = this.startDate ? this.datePipe.transform(this.startDate, "yyyy-MM-dd"):'';
+    let end = this.endDate ? this.datePipe.transform(this.endDate, "yyyy-MM-dd"):'';
     this.httpClient.get<number>(`http://localhost:8081/outcome/sumchildcare?start=${start}&end=${end}`)
       .subscribe(
          data =>{
@@ -156,8 +156,8 @@ public barChartData?: ChartDataset[];
   }
 
   public getSumInsurance(): void {
-    let start = this.datePipe.transform(this.startDate, "yyyy-MM-dd");
-    let end = this.datePipe.transform(this.endDate, "yyyy-MM-dd");
+    let start = this.startDate ? this.datePipe.transform(this.startDate, "yyyy-MM-dd"):'';
+    let end = this.endDate ? this.datePipe.transform(this.endDate, "yyyy-MM-dd"):'';
     this.httpClient.get<number>(`http://localhost:8081/outcome/suminsurance?start=${start}&end=${end}`)
       .subscribe(
          data =>{
@@ -168,8 +168,8 @@ public barChartData?: ChartDataset[];
   }
 
   public getSumEntertainment(): void {
-    let start = this.datePipe.transform(this.startDate, "yyyy-MM-dd");
-    let end = this.datePipe.transform(this.endDate, "yyyy-MM-dd");
+    let start = this.startDate ? this.datePipe.transform(this.startDate, "yyyy-MM-dd"):'';
+    let end = this.endDate ? this.datePipe.transform(this.endDate, "yyyy-MM-dd"):'';
     this.httpClient.get<number>(`http://localhost:8081/outcome/sumentertainment?start=${start}&end=${end}`)
       .subscribe(
          data =>{
@@ -181,8 +181,8 @@ public barChartData?: ChartDataset[];
 
   
   public getSumOther(): void {
-    let start = this.datePipe.transform(this.startDate, "yyyy-MM-dd");
-    let end = this.datePipe.transform(this.endDate, "yyyy-MM-dd");
+    let start = this.startDate ? this.datePipe.transform(this.startDate, "yyyy-MM-dd"):'';
+    let end = this.endDate ? this.datePipe.transform(this.endDate, "yyyy-MM-dd"):'';
     this.httpClient.get<number>(`http://localhost:8081/outcome/sumother?start=${start}&end=${end}`)
       .subscribe(
          data =>{

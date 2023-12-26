@@ -14,7 +14,7 @@
 .calc{
     position:absolute;
     top:15px;
-    left:100px;
+    left:300px;
     font-size:15px;
     font-weight: bold;
     color:white;
@@ -23,8 +23,57 @@
 .sum{
     position:absolute;
     top:15px;
-    left:300px;
+    left:530px;
     font-size:15px;
     font-weight: bold;
     color:white;
 }
+
+.data-input{
+    position:absolute;
+    top:15px;
+    left:100px;
+    font-size:15px;
+    font-weight: bold;
+    color:white;
+}
+
+.income{
+    position:absolute;
+    top:15px;
+    left:710px;
+    font-size:15px;
+    font-weight: bold;
+    color:white;
+}
+
+.outcome{
+    position:absolute;
+    top:15px;
+    left:870px;
+    font-size:15px;
+    font-weight: bold;
+    color:white;
+}
+
+
+.menu p.active {
+    border-bottom: 2px solid black; /* Add underline to active link */
+    color: black; /* Change color for active link */
+  }
+
+  .menu p {
+    text-decoration: none; /* Remove default underline for all links */
+    padding: 10px;
+    margin: 5px;
+ 
+  }
+
+  p {
+    cursor: pointer;
+  }
+  
+  /* Optional: Change the cursor style for a specific class */
+  .custom-link {
+    cursor: pointer;
+  }

@@ -1,0 +1,33 @@
+<h2>Table Example</h2>
+<table class="table" >
+  <thead>
+    <tr>
+      <th>Dátum</th>
+      <th>Rezsi</th>
+      <th>Élelmiszer</th>
+      <th>Gyógyszer</th>
+      <th>Üzemanyag</th>
+      <th>Egyéb adó</th>
+      <th>Gyermekgondozás</th>
+      <th>Biztosítás</th>
+      <th>Szórakozás</th>
+      <th>Egyéb</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let item of outcomeList">
+      <td>{{ item.date | date:'yyyy-MM-dd' }}</td>
+      <td>{{ item.overhead }}</td>
+      <td>{{ item.food }}</td>
+      <td>{{ item.medication }}</td>
+      <td>{{ item.vehicleFuel }}</td>
+      <td>{{ item.otherTax }}</td>
+      <td>{{ item.cumulativeChildCare }}</td>
+      <td>{{ item.cumulativeInsurances }}</td>
+      <td>{{ item.entertainment }}</td>
+      <td>{{ item.other }}</td>
+    
+    </tr>
+  </tbody>
+</table>
+
